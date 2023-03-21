@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const task = todoInput.value.trim();
       if (task) {
         addTask(task);
+        window.top.postMessage('magenta', '*')
         todoInput.value = '';
       }
     });
@@ -23,5 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       todoList.appendChild(li);
     }
+
+    
   });
   
