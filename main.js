@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const task = todoInput.value.trim();
       if (task) {
         addTask(task);
-        window.top.postMessage('magenta', '*')
+        window.parent.postMessage('magenta', '*')
         todoInput.value = '';
       }
     });
